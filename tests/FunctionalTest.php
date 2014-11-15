@@ -18,7 +18,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * @test
      * @large
      */
-    public function create_simple_twig_message()
+    public function create_simple_twigged_message()
     {
         /** @var \Swift_Message $message */
         $message = $this->builder->buildMessage('simple.txt.twig');
@@ -37,7 +37,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * @test
      * @large
      */
-    public function create_twig_message_with_extends()
+    public function create_twigged_message_with_extends()
     {
         /** @var \Swift_Message $message */
         $message = $this->builder->buildMessage('extended.txt.twig');
@@ -49,7 +49,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * @test
      * @large
      */
-    public function create_twig_message_with_vars()
+    public function create_twigged_message_with_vars()
     {
         $vars = array(
             'to' => 'takashi@example.com',
@@ -67,7 +67,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * @test
      * @large
      */
-    public function create_html_twig_message()
+    public function create_html_twigged_message()
     {
         /** @var \Swift_Message $message */
         $message = $this->builder->buildMessage('simple.html.twig');
@@ -83,7 +83,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * You can make inline-styled html from unstyled html and css strings.
      * To allow recipients of your html email to receive it with Gmail, you will have to make inline-styled html body.
      */
-    public function create_html_twig_message_with_style_tag()
+    public function create_html_twigged_message_with_style_tag()
     {
         /** @var \Swift_Message $message */
         $message = $this->builder->buildMessage('simple.html.twig');
@@ -108,7 +108,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      *
      * Then images are correctly embedded into `$message`.
      */
-    public function create_html_twig_message_with_embedded_images()
+    public function create_html_twigged_message_with_embedded_images()
     {
         $imagePath = __DIR__ . '/templates/images/silex.png';
 
@@ -130,7 +130,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      *
      * You can get html with embedded images which are base64-encoded so that it can be previewed on browser.
      */
-    public function create_html_twig_message_with_embedded_images_and_preview()
+    public function create_html_twigged_message_with_embedded_images_and_preview()
     {
         $imagePath = __DIR__ . '/templates/images/silex.png';
 
