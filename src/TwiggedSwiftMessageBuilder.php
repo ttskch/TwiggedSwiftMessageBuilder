@@ -26,8 +26,15 @@ class TwiggedSwiftMessageBuilder
      * @param Embedder $embedder
      * @param CssToInlineStyles $styler
      */
-    public function __construct(\Twig_Environment $twig, Embedder $embedder, CssToInlineStyles $styler)
+    public function __construct(\Twig_Environment $twig, Embedder $embedder = null, CssToInlineStyles $styler = null)
     {
+        if (is_null($embedder)) {
+            $embedder = new Embedder();
+        }
+        if (is_null($styler)) {
+            $styler = new CssToInlineStyles();
+        }
+
         $this->twig = $twig;
         $this->embedder = $embedder;
         $this->styler = $styler;
