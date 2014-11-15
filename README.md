@@ -43,7 +43,7 @@ Hello [Example] World!
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder($twig);  // $twig is an instance of \Twig_Environment class.
+$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);  // $twig is an instance of \Twig_Environment class.
 
 $message = $builder->buildMessage('email.txt.twig');
 $message->setTo('hoge@example.com');
@@ -76,7 +76,7 @@ Offcourse you can pass variables and use them in Twig template with `{{ vars }}`
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder($twig);
+$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.txt.twig', array(
     'site_title' => 'FooBar Service',
@@ -94,7 +94,7 @@ To allow recipients of your html email to receive it with Gmail, you will have t
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder($twig);
+$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.html.twig');
 
@@ -128,7 +128,7 @@ You can embed images into message body as below:
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder($twig);
+$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.html.twig', array(
     'image_path' => '/path/to/image/file',
