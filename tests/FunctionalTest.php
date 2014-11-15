@@ -104,7 +104,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
      * You can embed images into message body by following steps.
      *
      * 1. Put `{{ embed_image('/full/path/to/image/file') }}` in your Twig template
-     * 2. After do `buildMessage`, execute `$message = finishEmbedImage($message);`
+     * 2. After do `buildMessage`, execute `$message = finalizeEmbedding($message);`
      *
      * Then images are correctly embedded into `$message`.
      */
@@ -119,7 +119,7 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
 
         $this->assertContains($imagePath, $message->getBody());
 
-        $message = $this->builder->finishEmbedImage($message);
+        $message = $this->builder->finalizeEmbedding($message);
 
         $this->assertContains('<img src="cid:', $message->getBody());
     }

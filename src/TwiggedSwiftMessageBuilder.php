@@ -112,7 +112,7 @@ class TwiggedSwiftMessageBuilder
      * @param \Swift_Message $message
      * @return \Swift_Message
      */
-    public function finishEmbedImage(\Swift_Message $message)
+    public function finalizeEmbedding(\Swift_Message $message)
     {
         $body = $message->getBody();
 

@@ -48,14 +48,14 @@ class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
         $builder->setInlineStyle($message, 'style');
     }
 
-    public function test_finishEmbedImage()
+    public function test_finalizeEmbedding()
     {
         $message = Phake::mock('Swift_Message');
         Phake::when($message)->getBody()->thenReturn('placeholder');
         Phake::when($message)->embed(Phake::anyParameters())->thenReturn('replacement');
 
         $builder = $this->getBuilder();
-        $builder->finishEmbedImage($message);
+        $builder->finalizeEmbedding($message);
 
         Phake::verify($message)->setBody('replacement');
     }

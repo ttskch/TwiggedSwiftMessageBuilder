@@ -137,8 +137,8 @@ $message = $builder->buildMessage('email.html.twig', array(
 // you can get renderable html with base64 encoded images. (In case you want to print preview.)
 $renderableHtml = $builder->renderBody($message);
 
-// you must finish embedding before send message.
-$message = $builder->finishEmbedImage($message);
+// you must finalize embedding before send message.
+$message = $builder->finalizeEmbedding($message);
 
 $mailer->send($message);
 ```
