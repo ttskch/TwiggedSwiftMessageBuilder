@@ -65,19 +65,30 @@ class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
         $message = Phake::mock('Swift_Message');
         Phake::when($message)->getBody()->thenReturn('placeholder');
 
-        $placeholder = new Placeholder('placeholder', __DIR__ . '/templates/images/silex.png');
+        $placeholders = array(new Placeholder('placeholder', __DIR__ . '/templates/images/silex.png'));
 
-        $builder = $this->getBuilder($placeholder);
+        $builder = $this->getBuilder($placeholders);
         $body = $builder->renderBody($message);
 
-        $base64 = 'data:image/png;base64,' . base64_encode(file_get_contents($placeholder->getImagePath()));
+        $base64 = 'data:image/png;base64,' . base64_encode(file_get_contents($placeholders[0]->getImagePath()));
         $this->assertEquals($base64, $body);
     }
 
-    private function getBuilder(Placeholder $placeholder = null)
+    public function test_renderBody_with_no_images()
+    {
+        $message = Phake::mock('Swift_Message');
+        Phake::when($message)->getBody()->thenReturn('normal body');
+
+        $builder = $this->getBuilder(array());
+        $body = $builder->renderBody($message);
+
+        $this->assertEquals('normal body', $body);
+    }
+
+    private function getBuilder(array $placeholders = null)
     {
         $twig = $this->getMockTwigEnvironment();
-        $embedder = $this->getMockEmbedder($placeholder);
+        $embedder = $this->getMockEmbedder($placeholders);
         $styler = $this->getMockStyler();
 
         return new TwiggedSwiftMessageBuilder($twig, $embedder, $styler);
@@ -103,12 +114,11 @@ class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
         return $twig;
     }
 
-    private function getMockEmbedder(Placeholder $placeholder = null)
+    private function getMockEmbedder(array $placeholders = null)
     {
-        if (is_null($placeholder)) {
-            $placeholder = new Placeholder('placeholder', '/path/to/image');
+        if (is_null($placeholders)) {
+            $placeholders = array(new Placeholder('placeholder', '/path/to/image'));
         }
-        $placeholders = array($placeholder);
 
         $embedder = Phake::mock('Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder');
         Phake::when($embedder)->extractPlaceholders(Phake::anyParameters())->thenReturn($placeholders);
