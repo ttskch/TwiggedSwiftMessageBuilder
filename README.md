@@ -10,6 +10,10 @@
  * to create inline styled html email from unstyled html and css strings
  * to embed some image files into message body
 
+## Requirements
+
+* PHP 5.3+
+
 ## Getting started
 
 First add this dependency into your `composer.json`:
