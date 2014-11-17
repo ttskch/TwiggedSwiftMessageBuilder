@@ -65,7 +65,7 @@ These fields can be defined.
 
 ## Use variables in Twig template
 
-Offcourse you can pass variables and use them in Twig template with `{{ vars }}` as below:
+Offcourse you can pass variables and use them in Twig template as below:
 
 ```twig
 {# email.txt.twig #}
