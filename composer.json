@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "swiftmailer/swiftmailer": "5.2.*@dev",
+        "swiftmailer/swiftmailer": "5.2.1",
         "twig/twig": "~1.12",
         "tijsverkoyen/css-to-inline-styles": "~1.5"
     },
