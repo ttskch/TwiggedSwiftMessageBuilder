@@ -21,7 +21,7 @@ First add this dependency into your `composer.json`:
 ```json
 {
     "require": {
-        "qckanemoto/twigged-swiftmessage-builder": "dev-master"
+        "qckanemoto/twigged-swiftmessage-builder": "1.0.*@dev"
     }
 }
 ```
