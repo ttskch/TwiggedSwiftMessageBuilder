@@ -1,9 +1,9 @@
 <?php
-namespace Qck\TwiggedSwiftMessageBuilder;
+namespace Tch\TwiggedSwiftMessageBuilder;
 
-use Qck\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
-use Qck\TwiggedSwiftMessageBuilder\Twig\Extension\TwiggedSwiftMessageBuilderExtension;
-use Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
+use Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
+use Tch\TwiggedSwiftMessageBuilder\Twig\Extension\TwiggedSwiftMessageBuilderExtension;
+use Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
 use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 
 class TwiggedSwiftMessageBuilder
@@ -116,7 +116,7 @@ class TwiggedSwiftMessageBuilder
     {
         $body = $message->getBody();
 
-        /** @var \Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder[] $placeholders */
+        /** @var \Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder[] $placeholders */
         $placeholders = $this->embedder->extractPlaceholders($body);
 
         foreach ($placeholders as $placeholder) {
@@ -137,7 +137,7 @@ class TwiggedSwiftMessageBuilder
     {
         $body = $message->getBody();
 
-        /** @var \Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder[] $placeholders */
+        /** @var \Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder[] $placeholders */
         $placeholders = $this->embedder->extractPlaceholders($body);
 
         foreach ($placeholders as $placeholder) {
@@ -153,7 +153,7 @@ class TwiggedSwiftMessageBuilder
     }
 
     /**
-     * @param \Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder $embedder
+     * @param \Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder $embedder
      */
     public function setEmbedder($embedder)
     {

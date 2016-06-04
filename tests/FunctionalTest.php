@@ -1,7 +1,7 @@
 <?php
-namespace Qck\TwiggedSwiftMessageBuilder;
+namespace Tch\TwiggedSwiftMessageBuilder;
 
-use Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
+use Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
 use TijsVerkoyen\CssToInlineStyles\CssToInlineStyles;
 
 class FunctionalTest extends \PHPUnit_Framework_TestCase

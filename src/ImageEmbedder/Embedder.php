@@ -1,16 +1,16 @@
 <?php
-namespace Qck\TwiggedSwiftMessageBuilder\ImageEmbedder;
+namespace Tch\TwiggedSwiftMessageBuilder\ImageEmbedder;
 
-use Qck\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
+use Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
 
 class Embedder
 {
-    private $placeholderPattern = ';qck_twigged_swiftmessage_builder;%s;';
+    private $placeholderPattern = ';tch_twigged_swiftmessage_builder;%s;';
 
     /**
      * @param $imagePath
      * @return Placeholder
-     * @throws \Qck\TwiggedSwiftMessageBuilder\Exception\RuntimeException
+     * @throws \Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException
      */
     public function placeholderize($imagePath)
     {

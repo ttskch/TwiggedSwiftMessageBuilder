@@ -1,7 +1,7 @@
 <?php
-namespace Qck\TwiggedSwiftMessageBuilder\Twig\Extension;
+namespace Tch\TwiggedSwiftMessageBuilder\Twig\Extension;
 
-use Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
+use Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
 
 class TwiggedSwiftMessageBuilderExtension extends \Twig_Extension
 {
@@ -26,6 +26,6 @@ class TwiggedSwiftMessageBuilderExtension extends \Twig_Extension
 
     public function getName()
     {
-        return 'qck_twigged_swiftmessage_builder_extension';
+        return 'tch_twigged_swiftmessage_builder_extension';
     }
 }

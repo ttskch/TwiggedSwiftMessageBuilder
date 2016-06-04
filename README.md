@@ -1,8 +1,8 @@
 # TwiggedSwiftMessageBuilder
 
-[![Build Status](https://travis-ci.org/qckanemoto/TwiggedSwiftMessageBuilder.svg?branch=master)](https://travis-ci.org/qckanemoto/TwiggedSwiftMessageBuilder)
-[![Latest Stable Version](https://poser.pugx.org/qckanemoto/twigged-swiftmessage-builder/v/stable.svg)](https://packagist.org/packages/qckanemoto/twigged-swiftmessage-builder)
-[![Total Downloads](https://poser.pugx.org/qckanemoto/twigged-swiftmessage-builder/downloads.svg)](https://packagist.org/packages/qckanemoto/twigged-swiftmessage-builder)
+[![Build Status](https://travis-ci.org/ttskch/TwiggedSwiftMessageBuilder.svg?branch=master)](https://travis-ci.org/ttskch/TwiggedSwiftMessageBuilder)
+[![Latest Stable Version](https://poser.pugx.org/ttskch/twigged-swiftmessage-builder/v/stable.svg)](https://packagist.org/packages/ttskch/twigged-swiftmessage-builder)
+[![Total Downloads](https://poser.pugx.org/ttskch/twigged-swiftmessage-builder/downloads.svg)](https://packagist.org/packages/ttskch/twigged-swiftmessage-builder)
 
 `TwiggedSwiftMessageBuilder` class allows you following things:
 
@@ -21,7 +21,7 @@ First add this dependency into your `composer.json`:
 ```json
 {
     "require": {
-        "qckanemoto/twigged-swiftmessage-builder": "1.0.*@dev"
+        "ttskch/twigged-swiftmessage-builder": "1.0.*@dev"
     }
 }
 ```
@@ -43,7 +43,7 @@ Hello [Example] World!
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);  // $twig is an instance of \Twig_Environment class.
+$builder = new \Tch\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);  // $twig is an instance of \Twig_Environment class.
 
 $message = $builder->buildMessage('email.txt.twig');
 $message->setTo('hoge@example.com');
@@ -76,7 +76,7 @@ Offcourse you can pass variables and use them in Twig template as below:
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
+$builder = new \Tch\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.txt.twig', array(
     'site_title' => 'FooBar Service',
@@ -94,7 +94,7 @@ To allow recipients of your html email to receive it with Gmail, you will have t
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
+$builder = new \Tch\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.html.twig');
 
@@ -128,7 +128,7 @@ You can embed images into message body as below:
 ```php
 // in your application.
 
-$builder = new \Qck\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
+$builder = new \Tch\TwiggedSwiftMessageBuilder\TwiggedSwiftMessageBuilder($tiwg);
 
 $message = $builder->buildMessage('email.html.twig', array(
     'image_path' => '/path/to/image/file',

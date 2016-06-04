@@ -1,8 +1,8 @@
 {
-    "name": "qckanemoto/twigged-swiftmessage-builder",
+    "name": "ttskch/twigged-swiftmessage-builder",
     "description": "Twig templated Swift_Message builder service.",
     "keywords": ["Twig", "Swift_Message", "Swift_Mailer"],
-    "homepage": "https://github.com/qckanemoto/TwiggedSwiftMessageBuilder",
+    "homepage": "https://github.com/ttskch/TwiggedSwiftMessageBuilder",
     "config": {
         "bin-dir": "bin"
     },
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Qck\\TwiggedSwiftMessageBuilder\\": "src/"
+            "Tch\\TwiggedSwiftMessageBuilder\\": "src/"
         }
     },
     "extra": {

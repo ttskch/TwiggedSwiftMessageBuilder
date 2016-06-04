@@ -1,8 +1,8 @@
 <?php
-namespace Qck\TwiggedSwiftMessageBuilder;
+namespace Tch\TwiggedSwiftMessageBuilder;
 
 use Phake;
-use Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder;
+use Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Placeholder;
 
 class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
 {
@@ -42,7 +42,7 @@ class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
         $message = Phake::mock('Swift_Message');
         Phake::when($message)->getContentType()->thenReturn('text/plain');
 
-        $this->setExpectedException('Qck\TwiggedSwiftMessageBuilder\Exception\RuntimeException');
+        $this->setExpectedException('Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException');
 
         $builder = $this->getBuilder();
         $builder->setInlineStyle($message, 'style');
@@ -120,7 +120,7 @@ class TwiggedSwiftMessageBuilderTest extends \PHPUnit_Framework_TestCase
             $placeholders = array(new Placeholder('placeholder', '/path/to/image'));
         }
 
-        $embedder = Phake::mock('Qck\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder');
+        $embedder = Phake::mock('Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder');
         Phake::when($embedder)->extractPlaceholders(Phake::anyParameters())->thenReturn($placeholders);
         Phake::when($embedder)->extractPlaceholders(Phake::anyParameters())->thenReturn($placeholders);
 
