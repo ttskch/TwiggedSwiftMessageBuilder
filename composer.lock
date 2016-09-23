@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80d4956cb59102496d8c1fab50f43136",
+    "hash": "e50549f71c7ad3e11dc2168e8a9d7d67",
+    "content-hash": "b21a611395e3ded2a13e3ba6d24a2722",
     "packages": [
         {
             "name": "swiftmailer/swiftmailer",
@@ -66,12 +67,12 @@
             "target-dir": "Symfony/Component/CssSelector",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/CssSelector.git",
+                "url": "https://github.com/symfony/css-selector.git",
                 "reference": "7cdf543a3f31935aae58de4e6e607d4bdeb3f5dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/7cdf543a3f31935aae58de4e6e607d4bdeb3f5dc",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/7cdf543a3f31935aae58de4e6e607d4bdeb3f5dc",
                 "reference": "7cdf543a3f31935aae58de4e6e607d4bdeb3f5dc",
                 "shasum": ""
             },
@@ -273,16 +274,16 @@
         },
         {
             "name": "phake/phake",
-            "version": "dev-master",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlively/Phake.git",
-                "reference": "0fbfb043949d31cb8e8c5160638c4e0320410b0b"
+                "reference": "15d688aa23e6d5db433accb75feea6c0a1cdd1f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlively/Phake/zipball/0fbfb043949d31cb8e8c5160638c4e0320410b0b",
-                "reference": "0fbfb043949d31cb8e8c5160638c4e0320410b0b",
+                "url": "https://api.github.com/repos/mlively/Phake/zipball/15d688aa23e6d5db433accb75feea6c0a1cdd1f1",
+                "reference": "15d688aa23e6d5db433accb75feea6c0a1cdd1f1",
                 "shasum": ""
             },
             "require": {
@@ -325,7 +326,7 @@
                 "mock",
                 "testing"
             ],
-            "time": "2014-10-16 16:13:17"
+            "time": "2015-03-21 18:05:30"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1023,6 +1024,7 @@
         "phake/phake": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.3"
     },
