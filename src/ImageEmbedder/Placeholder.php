@@ -1,5 +1,5 @@
 <?php
-namespace Tch\TwiggedSwiftMessageBuilder\ImageEmbedder;
+namespace Ttskch\TwiggedSwiftMessageBuilder\ImageEmbedder;
 
 class Placeholder
 {

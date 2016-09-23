@@ -1,10 +1,10 @@
 <?php
 /**
- * This file is part of the Tch.TwiggedSwiftMessageBuilder
+ * This file is part of the Ttskch.TwiggedSwiftMessageBuilder
  *
  * @license http://opensource.org/licenses/bsd-license.php BSD
  */
-namespace Tch\TwiggedSwiftMessageBuilder\Exception;
+namespace Ttskch\TwiggedSwiftMessageBuilder\Exception;
 
 interface ExceptionInterface
 {
