@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tch\\TwiggedSwiftMessageBuilder\\": "src/"
+            "Ttskch\\TwiggedSwiftMessageBuilder\\": "src/"
         }
     },
     "extra": {

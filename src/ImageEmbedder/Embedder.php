@@ -1,7 +1,7 @@
 <?php
-namespace Tch\TwiggedSwiftMessageBuilder\ImageEmbedder;
+namespace Ttskch\TwiggedSwiftMessageBuilder\ImageEmbedder;
 
-use Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
+use Ttskch\TwiggedSwiftMessageBuilder\Exception\RuntimeException;
 
 class Embedder
 {
@@ -10,7 +10,7 @@ class Embedder
     /**
      * @param $imagePath
      * @return Placeholder
-     * @throws \Tch\TwiggedSwiftMessageBuilder\Exception\RuntimeException
+     * @throws \Ttskch\TwiggedSwiftMessageBuilder\Exception\RuntimeException
      */
     public function placeholderize($imagePath)
     {

@@ -1,7 +1,7 @@
 <?php
-namespace Tch\TwiggedSwiftMessageBuilder\Twig\Extension;
+namespace Ttskch\TwiggedSwiftMessageBuilder\Twig\Extension;
 
-use Tch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
+use Ttskch\TwiggedSwiftMessageBuilder\ImageEmbedder\Embedder;
 
 class TwiggedSwiftMessageBuilderExtension extends \Twig_Extension
 {
